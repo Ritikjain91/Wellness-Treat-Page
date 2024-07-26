@@ -5,3 +5,8 @@ Your changes in the main branch
 =======
 Changes from the remote main branch
 >>>>>>> origin/main
+## Combined Changes
+- Your changes in the main branch
+- Combined with changes from the remote main branch
+
+

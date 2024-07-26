@@ -2,29 +2,39 @@
   font-family: Arial, sans-serif;
   padding: 20px;
   text-align: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .filter-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
 .filter-dropdown {
   padding: 10px 20px;
-  margin-right: 10px;
+  margin: 10px;
   cursor: pointer;
+  flex: 1;
+  min-width: 200px;
 }
 
 .search-container {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
 }
 
 #searchInput {
   padding: 10px;
   width: 300px;
+  max-width: 100%;
   margin-right: 10px;
 }
 
@@ -54,6 +64,7 @@ button:hover {
   width: 300px;
   margin: 10px;
   text-align: left;
+  flex: 1;
 }
 
 .retreat-image {
@@ -72,4 +83,37 @@ button:hover {
 
 .pagination button {
   margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-dropdown, .search-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  #searchInput {
+    width: calc(100% - 120px);
+    margin-right: 10px;
+  }
+
+  .results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  #searchInput {
+    width: calc(100% - 110px);
+  }
 }

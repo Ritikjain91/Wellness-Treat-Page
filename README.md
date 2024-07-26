@@ -5,3 +5,9 @@ Your changes in the main branch
 =======
 Changes from the master branch
 >>>>>>> origin/master
+## Updates in the Main Branch
+- Details about the changes in the main branch.
+
+## Updates from the Master Branch
+- Details about the changes from the master branch.
+

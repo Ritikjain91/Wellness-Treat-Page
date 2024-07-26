@@ -64,7 +64,7 @@ button:hover {
   width: 300px;
   margin: 10px;
   text-align: left;
-  flex: 1;
+  flex: 1 1 300px; /* Ensure cards take at least 300px width */
 }
 
 .retreat-image {

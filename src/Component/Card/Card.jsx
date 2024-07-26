@@ -7,7 +7,7 @@ const App = () => {
   const [page, setPage] = useState(1);
   const [filterType, setFilterType] = useState('');
   const [filterDate, setFilterDate] = useState('');
-  const limit = 4;
+  const limit = 6;
 
   useEffect(() => {
     fetchRetreats();
@@ -32,6 +32,7 @@ const App = () => {
       const response = await fetch(`https://669f704cb132e2c136fdd9a0.mockapi.io/api/v1/retreats?search=${searchTerm}`);
       const data = await response.json();
       setResults(Array.isArray(data) ? data : []);
+      setPage(1); // Reset to the first page after search
     } catch (error) {
       console.error('Error fetching data:', error);
       setResults([]);
